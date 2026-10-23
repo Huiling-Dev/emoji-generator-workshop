@@ -1,0 +1,3 @@
+# Lets Bun's built-in bundler compile Tailwind CSS for HTML imports.
+[serve.static]
+plugins = ["bun-plugin-tailwind"]

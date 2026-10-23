@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Workshop theme: a sticker sheet on grid backing paper.
+   Use these as Tailwind classes: bg-paper, text-ink, bg-cobalt, bg-sun, font-display ... */
+@theme {
+  --color-paper: #eef1ff;
+  --color-grid: #d9defa;
+  --color-ink: #1b1f3b;
+  --color-cobalt: #2d47e0;
+  --color-sun: #ffd23f;
+  --font-display: "Fredoka", ui-rounded, system-ui, sans-serif;
+  --font-sans: "Atkinson Hyperlegible", system-ui, sans-serif;
+}
+
+/* The grid "backing paper" behind the stickers: className="sheet-grid" */
+@utility sheet-grid {
+  background-color: white;
+  background-image:
+    linear-gradient(var(--color-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-cobalt);
+  outline-offset: 3px;
+}
