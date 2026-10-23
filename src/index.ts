@@ -1,7 +1,8 @@
 // Bun server: serves the React app AND the JSON API from one process.
+// Step 3: the only change from Step 2 is the store import below (memory -> PostgreSQL).
 import index from "./index.html";
 import { clampCount, generateEmojis, isCategory, type NewEmoji } from "./lib/emojis";
-import { store } from "./server/memory-store";
+import { store } from "./server/pg-store";
 
 const server = Bun.serve({
   port: Number(Bun.env.PORT ?? 3000),
